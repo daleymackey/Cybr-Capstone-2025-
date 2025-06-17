@@ -47,6 +47,7 @@ Then each team develop a security program for the small business which includes:
 3) the students should purposely leave a vulnerability in their security program (for other team exploit). The student team is expected to implement the security program in the assigned VM.
 
 ### Deliverable 
+#### Phase 2 
 2.2. Phase 2 – vulnerability exploitation
 Each student team is given the URL of the ecommerce site that another team is in charge of
 protecting. The student team exploits the vulnerability/weakness of the assigned URL.
@@ -54,6 +55,8 @@ Deliverable: Project phase 2 report include tools and strategies used to exploit
 and discoveries from the exploitation. The report should be submitted to the corresponding D2L
 assignment drop box by the end of week 5. Detailed requirements on the report is available in
 D2L course site.
+### Deliverable 
+#### Phase 3 
 2.3. Phase 3 – vulnerability exploitation
 Each student team is given the security program developed by team who is in charge of
 protecting assigned URL. Each team is also given the vulnerabilities discovered by other team.
