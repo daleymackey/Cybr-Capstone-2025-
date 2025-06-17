@@ -34,7 +34,11 @@
 | **Brandon** | VM deployment, web server setup, log rotation, network configuration |
 
 **Timeline:** 2-3 weeks  
-**Resume/LinkedIn gold:** Captures real attack data, demonstrates offensive/defensive security thinking, produces impressive metrics ("analyzed 500+ attack attempts"), shows threat intelligence capabilities
+**Resume/LinkedIn gold:** Captures real attack data, demonstrates offensive/defensive security thinking, produces impressive metrics ("analyzed 500+ attack attempts"), shows threat intelligence capabilities.
+
+**Deception Strategy:** Present as "SecureLogon Pro" authentication portal to other teams. Intentional vulnerabilities (command injection, directory traversal) serve dual purpose - satisfying exploit requirements while demonstrating attacker techniques in controlled environment.
+
+**Demo Value:** Reveal honeypot nature during presentation with complete attack timeline analysis. Shows understanding of both offensive and defensive security methodologies.
 
 ---
 
