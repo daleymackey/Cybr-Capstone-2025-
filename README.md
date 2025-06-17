@@ -1,13 +1,22 @@
 # Cybr-Capstone-2025-
 This REPO will be used for Kennesaw State's 2025 Capstone 
 ## Steps to take 
-- Email professor about the following : 
+- Email professor about the following [X]: 
     - We can create a Gantt Chart but don't understand if we are assigned a VM
     - Are we able to do anything for security 
     - Are there specific guidelines 
     - Are we required to use specific technologies 
     - Scenario is E-Commerce 
-    -  
+## Professor Response : 
+- On the beginning document, it states we will be assigned a VM, when will this happen? We feel without it we cannot completely fill out the Gantt chart with deliverables until we have this information." ----- I am actively working with the CCSE IT team to set up the VM for this class. It will be completed very soon. I will update the class once I get a green signal from them. Regarding the Gantt chart, you can provide a tentative at this point, and that is completely fine. 
+
+- "Are we able to do "anything" for security, or will you be assigning specifics?" ----- For this class, I want you to leverage all the learnings and techniques you have learned and experiences you have so far in this program to conduct a small research that the end product will be a prototype of something usable. There is no specific limitation or particular assignment of the project to each group-- I want you to push your boundaries and do something innovative. I have only two requirements from my side-- the project needs to be relevant to cybersecurity, and the end product must be a prototype of a usable system. I will evaluate the technical rigor, usefulness, usability, and significance of the project at the end, not which context you chose for this. 
+
+- Are there specific guidelines we must follow? ----- It is primarily a set of group research activities. The provided instructions will suffice to be followed. Please adhere to the plan for each of the three phases. 
+
+- Are we required to use specific technologies----- No, you have the freedom to design your problem/project and leverage technologies that best fit the interest of the project. 
+
+From our understanding the scenario is E-Commerce for Everything Organic, is this correct? ----- No, please read the response above.
 ### Phase 1 
 #### Business Scenario 
 Everything Organic is a small business that sell organic vegetables produced
@@ -48,8 +57,10 @@ D2L course site.
 2.3. Phase 3 – vulnerability exploitation
 Each student team is given the security program developed by team who is in charge of
 protecting assigned URL. Each team is also given the vulnerabilities discovered by other team.
-The report in this phase should include: 1) examinations of the systems for traces of exploitation;
-2) reflections on the vulnerability reports from the other team; 3) reflections the security program
+The report in this phase should include: 
+1) examinations of the systems for traces of exploitation;
+2) reflections on the vulnerability reports from the other team;
+3) reflections the security program
 provided by the other teams.
 Deliverable: Project phase 3 report should be submitted to the corresponding D2L assignment
 drop box by the end of week 6. Detailed requirements on the report is available in D2L course
