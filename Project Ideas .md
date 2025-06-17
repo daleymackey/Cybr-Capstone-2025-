@@ -10,7 +10,7 @@
 
 ## Project Options
 
-## 🟢 **RECOMMENDED - Code Vulnerability Scanner**
+## 🟢 **SOLID OPTION - Code Vulnerability Scanner**
 **Technologies:** Python/C# + Flask/ASP.NET + HTML/CSS + Chart.js  
 
 | Team Member | Responsibilities |
@@ -20,11 +20,11 @@
 | **Brandon** | VM setup, web server configuration, deployment scripts, environment management |
 
 **Timeline:** 2-3 weeks  
-**Why it's ideal:** Clear separation of responsibilities, everyone contributes their strengths
+**Resume appeal:** Demonstrates defensive security skills, code analysis expertise, practical tool development
 
 ---
 
-## 🟢 **SIMPLE OPTION - Web Application Honeypot**
+## 🟢 **RECOMMENDED - Web Application Honeypot**
 **Technologies:** Python/Flask + SQLite + Basic HTML + Log analysis tools  
 
 | Team Member | Responsibilities |
@@ -34,7 +34,7 @@
 | **Brandon** | VM deployment, web server setup, log rotation, network configuration |
 
 **Timeline:** 2-3 weeks  
-**Why it's appealing:** Generates real attack data automatically, minimal setup complexity
+**Resume/LinkedIn gold:** Captures real attack data, demonstrates offensive/defensive security thinking, produces impressive metrics ("analyzed 500+ attack attempts"), shows threat intelligence capabilities
 
 ---
 
