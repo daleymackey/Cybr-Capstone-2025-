@@ -24,6 +24,76 @@
 
 ---
 
+## 🟢 **SIMPLE OPTION - Web Application Honeypot**
+**Technologies:** Python/Flask + SQLite + Basic HTML + Log analysis tools  
+
+| Team Member | Responsibilities |
+|-------------|------------------|
+| **Daley** | Fake login portal logic, attack logging system, data analysis scripts |
+| **Carley** | Attack pattern documentation, security analysis reports, threat intelligence research |
+| **Brandon** | VM deployment, web server setup, log rotation, network configuration |
+
+**Timeline:** 2-3 weeks  
+**Why it's appealing:** Generates real attack data automatically, minimal setup complexity
+
+---
+
+## 🟢 **SIMPLE OPTION - Password Breach Checker**
+**Technologies:** Python + HaveIBeenPwned API + Web interface + Database  
+
+| Team Member | Responsibilities |
+|-------------|------------------|
+| **Daley** | API integration, hash checking logic, web interface backend |
+| **Carley** | User guides, security education content, breach analysis documentation |
+| **Brandon** | Database setup, API rate limiting, web server configuration |
+
+**Timeline:** 2-3 weeks  
+**Why it's useful:** Clear security value, simple concept, educational impact
+
+---
+
+## 🟢 **SIMPLE OPTION - Basic Penetration Testing Toolkit**
+**Technologies:** Python + Existing security tools + Web dashboard + Reporting  
+
+| Team Member | Responsibilities |
+|-------------|------------------|
+| **Daley** | Tool integration scripts, report generation, scheduling system |
+| **Carley** | Testing methodology documentation, vulnerability explanations, best practices guides |
+| **Brandon** | Security tool installation, VM hardening, target environment setup |
+
+**Timeline:** 2-3 weeks  
+**Why it's practical:** Leverages existing tools, shows offensive security understanding
+
+---
+
+## 🟡 **INTERESTING OPTION - Phishing Email Detector**
+**Technologies:** Python + ML libraries + Email parsing + Web interface  
+
+| Team Member | Responsibilities |
+|-------------|------------------|
+| **Daley** | Detection algorithms, email parsing logic, machine learning model training |
+| **Carley** | Phishing research, detection accuracy testing, user education materials |
+| **Brandon** | Email server setup, model deployment, performance monitoring |
+
+**Timeline:** 3-4 weeks  
+**Why it's relevant:** Addresses major security threat, demonstrates ML application
+
+---
+
+## 🟡 **ENHANCED OPTION - Network Port Scanner with Intelligence**
+**Technologies:** Python + Network scanning + Vulnerability databases + Reporting  
+
+| Team Member | Responsibilities |
+|-------------|------------------|
+| **Daley** | Enhanced scanning logic, vulnerability correlation, intelligence integration |
+| **Carley** | Vulnerability research, threat assessment documentation, scanning procedures |
+| **Brandon** | Network configuration, target environment setup, scanning optimization |
+
+**Timeline:** 3-4 weeks  
+**Why it's valuable:** Builds on familiar concepts, adds threat intelligence layer
+
+---
+
 ## 🟡 **SOLID OPTION - Deliberately Vulnerable Password Manager**
 **Technologies:** Python/JavaScript + SQLite + Web frontend  
 
@@ -79,4 +149,3 @@
 **Considerations:** Needs hardware access and extensive setup time
 
 ---
-
