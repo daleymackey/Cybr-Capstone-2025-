@@ -79,3 +79,34 @@ presentation for their project. Detailed instruction can be found in the D2L cou
 members. A student will be considered as significantly lack of contribution if the grade is
 less than 10 (out of 20) and may potentially fail the course. Detailed instruction can be
 found in the D2L course site.
+
+
+### Working Examples 
+![alt text](image.png)
+* Running on http://127.0.0.1:5000
+ * Running on http://172.20.2.221:5000
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.2.221:5000
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.2.221:5000
+ * Running on http://172.20.2.221:5000
+Press CTRL+C to quit
+Press CTRL+C to quit
+ * Restarting with stat
+Database initialized successfully!
+ * Debugger is active!
+Database initialized successfully!
+ * Debugger is active!
+ * Debugger is active!
+ * Debugger PIN: 708-209-224
+127.0.0.1 - - [22/Jun/2025 14:56:59] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [22/Jun/2025 14:57:37] "POST /login HTTP/1.1" 200 -
+127.0.0.1 - - [22/Jun/2025 14:58:03] "POST /login HTTP/1.1" 200 -
+(venv) PS C:\Users\Daley\repo\Cybr-Capstone-2025-> python check_attacks.py
+Recent attacks:
+('2025-06-22T14:58:03.875912', '127.0.0.1', 'katiesayshi', 'fakenews')
+('2025-06-22T14:57:37.422908', '127.0.0.1', 'blabbababab', 'fakepassword')
+('2025-06-22T14:56:59.666821', '127.0.0.1', None, None)
+('2025-06-22T14:50:19.537134', '127.0.0.1', 'admin ', 'password123')
+('2025-06-22T14:49:04.133637', '127.0.0.1', None, None)
