@@ -9,6 +9,7 @@ from tabs.web_logs import create_web_logs_tab
 from tabs.auth_logs import create_auth_logs_tab
 from tabs.malware_alerts import create_malware_alerts_tab
 from tabs.network_traffic import create_network_traffic_tab
+from tabs.incidents import create_incidents_tab
 
 # Initialize the Dash app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
@@ -71,25 +72,9 @@ def render_tab_content(active_tab):
     elif active_tab == "network-traffic":
         return create_network_traffic_tab(datasets['network_traffic'])
     elif active_tab == "incidents":
-        return create_incidents_tab()
+        return create_incidents_tab(datasets['security_incidents'])
 
 
-def create_incidents_tab():
-    df = datasets['security_incidents']
-    
-    return dbc.Container([
-        dbc.Row([
-            dbc.Col([
-                html.H3("🚨 Security Incident Analytics", className="mb-3"),
-                dbc.Card([
-                    dbc.CardBody([
-                        html.H5(f"Total Incidents: {len(df):,}", className="card-title"),
-                        html.P("Incident response dashboard", className="card-text")
-                    ])
-                ], color="danger", outline=True)
-            ])
-        ])
-    ])
 
 if __name__ == "__main__":
     app.run(debug=True, port=8050)
