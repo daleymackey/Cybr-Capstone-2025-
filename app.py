@@ -6,6 +6,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from data_loader import load_datasets
 from tabs.web_logs import create_web_logs_tab
+from tabs.auth_logs import create_auth_logs_tab
 
 # Initialize the Dash app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
@@ -62,7 +63,7 @@ def render_tab_content(active_tab):
     if active_tab == "web-logs":
         return create_web_logs_tab(datasets['web_logs'])
     elif active_tab == "auth-logs":
-        return create_auth_logs_tab()
+        return create_auth_logs_tab(datasets['auth_logs'])
     elif active_tab == "malware-alerts":
         return create_malware_tab()
     elif active_tab == "network-traffic":
@@ -70,23 +71,6 @@ def render_tab_content(active_tab):
     elif active_tab == "incidents":
         return create_incidents_tab()
 
-# Tab creation functions for other tabs (unchanged)
-def create_auth_logs_tab():
-    df = datasets['auth_logs']
-    
-    return dbc.Container([
-        dbc.Row([
-            dbc.Col([
-                html.H3("🔐 Authentication Analytics", className="mb-3"),
-                dbc.Card([
-                    dbc.CardBody([
-                        html.H5(f"Total Auth Events: {len(df):,}", className="card-title"),
-                        html.P(f"Columns: {', '.join(df.columns)}", className="card-text")
-                    ])
-                ], color="success", outline=True)
-            ])
-        ])
-    ])
 
 def create_malware_tab():
     df = datasets['malware_alerts']
