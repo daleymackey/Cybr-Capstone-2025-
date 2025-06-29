@@ -5,6 +5,7 @@ import dash_bootstrap_components as dbc
 import plotly.express as px
 import plotly.graph_objects as go
 from data_loader import load_datasets
+from tabs.web_logs import create_web_logs_tab
 
 # Initialize the Dash app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
@@ -59,7 +60,7 @@ def render_tab_content(active_tab):
         return dbc.Alert("Error loading data. Please check your datasets.", color="danger")
     
     if active_tab == "web-logs":
-        return create_web_logs_tab()
+        return create_web_logs_tab(datasets['web_logs'])
     elif active_tab == "auth-logs":
         return create_auth_logs_tab()
     elif active_tab == "malware-alerts":
@@ -69,34 +70,7 @@ def render_tab_content(active_tab):
     elif active_tab == "incidents":
         return create_incidents_tab()
 
-# Tab creation functions
-def create_web_logs_tab():
-    df = datasets['web_logs']
-    
-    # Sample charts for web logs
-    return dbc.Container([
-        dbc.Row([
-            dbc.Col([
-                html.H3("📊 Web Server Analytics", className="mb-3"),
-                dbc.Card([
-                    dbc.CardBody([
-                        html.H5(f"Total Requests: {len(df):,}", className="card-title"),
-                        html.P(f"Data Range: {df.shape[0]} records", className="card-text")
-                    ])
-                ], color="primary", outline=True)
-            ], width=6),
-            dbc.Col([
-                html.H3("🎯 Quick Stats", className="mb-3"),
-                dbc.Card([
-                    dbc.CardBody([
-                        html.H5("Status Code Distribution", className="card-title"),
-                        html.P("Charts coming next...", className="card-text")
-                    ])
-                ], color="info", outline=True)
-            ], width=6)
-        ])
-    ])
-
+# Tab creation functions for other tabs (unchanged)
 def create_auth_logs_tab():
     df = datasets['auth_logs']
     
