@@ -112,7 +112,7 @@ def create_auth_logs_tab(auth_logs):
             dbc.Col([
                 dcc.Graph(
                     figure=get_login_status_chart(auth_logs),
-                    style={'height': '400px'}
+                    style={'height': '500px'}
                 )
             ], width=6)
         ]),
@@ -120,7 +120,7 @@ def create_auth_logs_tab(auth_logs):
             dbc.Col([
                 dcc.Graph(
                     figure=get_login_timeline_chart(auth_logs),
-                    style={'height': '400px'}
+                    style={'height': '500px'}
                 )
             ], width=12)
         ]),

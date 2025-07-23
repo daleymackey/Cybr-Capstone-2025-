@@ -21,15 +21,61 @@ datasets = load_datasets()
 
 # Define the main layout
 app.layout = dbc.Container([
-    # Header
+    # Enhanced Header
     dbc.Row([
         dbc.Col([
-            html.H1("🛡️ Everything Organic - Cybersecurity Dashboard", 
-                   className="text-center mb-4", 
-                   style={'color': '#2c3e50', 'fontWeight': 'bold'}),
-            html.Hr(style={'borderWidth': '3px', 'borderColor': '#3498db'})
+            html.Div([
+                html.H1([
+                    html.I(className="fas fa-shield-alt me-3", style={'color': '#e74c3c'}),
+                    "Everything Organic - Cybersecurity Command Center"
+                ], className="text-center mb-3", 
+                   style={'color': '#2c3e50', 'fontWeight': 'bold', 'fontSize': '2.5rem'}),
+                html.P("Real-time Security Monitoring & Threat Intelligence Dashboard", 
+                       className="text-center text-muted lead mb-4"),
+                html.Hr(style={'borderWidth': '3px', 'borderColor': '#e74c3c'})
+            ])
         ])
     ]),
+    
+    # KPI Summary Cards (moved to top)
+    dbc.Row([
+        dbc.Col([
+            dbc.Card([
+                dbc.CardBody([
+                    html.H4("🚨 Critical Alerts", className="text-danger"),
+                    html.H2("548", className="text-danger mb-0"),
+                    html.P("Failed Login Attempts", className="text-muted")
+                ])
+            ], color="danger", outline=True)
+        ], width=3),
+        dbc.Col([
+            dbc.Card([
+                dbc.CardBody([
+                    html.H4("🔥 Active Threats", className="text-warning"), 
+                    html.H2("307", className="text-warning mb-0"),
+                    html.P("High Severity Malware", className="text-muted")
+                ])
+            ], color="warning", outline=True)
+        ], width=3),
+        dbc.Col([
+            dbc.Card([
+                dbc.CardBody([
+                    html.H4("⚡ Response Time", className="text-info"),
+                    html.H2("91min", className="text-info mb-0"), 
+                    html.P("Average Incident Response", className="text-muted")
+                ])
+            ], color="info", outline=True)
+        ], width=3),
+        dbc.Col([
+            dbc.Card([
+                dbc.CardBody([
+                    html.H4("✅ Resolution Rate", className="text-success"),
+                    html.H2("59.6%", className="text-success mb-0"),
+                    html.P("Incidents Resolved", className="text-muted")
+                ])
+            ], color="success", outline=True)
+        ], width=3)
+    ], className="mb-4"),
     
     # Navigation Tabs
     dbc.Row([

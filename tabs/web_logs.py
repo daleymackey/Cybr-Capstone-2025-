@@ -110,7 +110,7 @@ def create_web_logs_tab(web_logs):
             dbc.Col([
                 dcc.Graph(
                     figure=get_status_code_chart(web_logs),
-                    style={'height': '400px'}
+                    style={'height': '500px'}
                 )
             ], width=6)
         ]),
@@ -118,7 +118,7 @@ def create_web_logs_tab(web_logs):
             dbc.Col([
                 dcc.Graph(
                     figure=get_traffic_timeline_chart(web_logs),
-                    style={'height': '400px'}
+                    style={'height': '500px'}
                 )
             ], width=12)
         ]),
@@ -126,7 +126,7 @@ def create_web_logs_tab(web_logs):
             dbc.Col([
                 dcc.Graph(
                     figure=get_response_time_chart(web_logs),
-                    style={'height': '400px'}
+                    style={'height': '500px'}
                 )
             ], width=12)
         ]),
@@ -134,7 +134,7 @@ def create_web_logs_tab(web_logs):
             dbc.Col([
                 dcc.Graph(
                     figure=get_top_urls_chart(web_logs),
-                    style={'height': '400px'}
+                    style={'height': '500px'}
                 )
             ], width=12)
         ])
