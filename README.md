@@ -6,12 +6,8 @@ Cybr-Capstone-2025-/
 ├── app.py                    # Main Dash application
 ├── data_loader.py           # Data loading utilities
 ├── requirements.txt         # Python dependencies
-├── config.py               # Configuration settings
 ├── assets/
 │   └── style.css           # Custom CSS styles
-├── components/
-│   ├── charts.py           # Reusable chart components
-│   └── layouts.py          # Common layout components
 ├── tabs/
 │   ├── web_logs.py         # Dataset 1: Web Server Access Logs
 │   ├── auth_logs.py        # Dataset 2: User Authentication Logs
