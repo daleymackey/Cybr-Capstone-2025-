@@ -20,8 +20,8 @@ def create_web_logs_tab(web_logs):
                                     textinfo='label+percent')])
         
         fig.update_layout(title="HTTP Status Code Distribution")
-        return fig
-    
+        return apply_grey_theme(fig)
+
     def get_traffic_timeline_chart(data):
     # Convert timestamp to datetime and extract hour
         timeline_data = data.with_columns([
@@ -39,8 +39,8 @@ def create_web_logs_tab(web_logs):
             xaxis_title="Hour (24h format)",
             yaxis_title="Number of Requests"
         )
-        return fig
-    
+        return apply_grey_theme(fig)
+
     def get_response_time_chart(data):
     # Create response time histogram
         response_times = data['response_time_ms'].to_list()
@@ -60,7 +60,7 @@ def create_web_logs_tab(web_logs):
         fig.add_vline(x=avg_time, line_dash="dash", line_color="red", 
                     annotation_text=f"Avg: {avg_time:.1f}ms")
         
-        return fig
+        return apply_grey_theme(fig) 
     
     def get_top_urls_chart(data):
     # Get top 15 most accessed URLs
@@ -90,6 +90,16 @@ def create_web_logs_tab(web_logs):
         colors = ['darkred' if c == max_count else 'steelblue' for c in counts]
         fig.data[0].marker.color = colors
         
+        return apply_grey_theme(fig)
+    
+    def apply_grey_theme(fig):
+        """Apply consistent grey theme to all charts"""
+        fig.update_layout(
+            plot_bgcolor='#bdc3c7',      # Grey chart background
+            paper_bgcolor='#bdc3c7',     # Grey outer background  
+            font=dict(color="#425a72"),  # Dark grey text
+            title=dict(font=dict(color='#2c3e50', size=16))
+        )
         return fig
         
     return dbc.Container([

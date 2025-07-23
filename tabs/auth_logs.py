@@ -19,8 +19,8 @@ def create_auth_logs_tab(auth_logs):
         fig = go.Figure(data=[go.Pie(labels=statuses, values=counts)])
         fig.update_traces(marker_colors=colors, textinfo='label+percent')
         fig.update_layout(title="Login Success vs Failure Rate")
-        return fig
-    
+        return apply_grey_theme(fig)
+
     def get_failed_logins_by_ip_chart(data):
         # Get only failed logins and count by IP
         failed_logins = (data.filter(pl.col("login_status") == "Failure")
@@ -39,8 +39,8 @@ def create_auth_logs_tab(auth_logs):
             yaxis_title="IP Address",
             height=500
         )
-        return fig
-    
+        return apply_grey_theme(fig)
+
     def get_login_timeline_chart(data):
         # Login attempts over time by hour
         timeline_data = data.with_columns([
@@ -76,8 +76,8 @@ def create_auth_logs_tab(auth_logs):
             xaxis_title="Hour (24h format)",
             yaxis_title="Number of Attempts"
         )
-        return fig
-    
+        return apply_grey_theme(fig)
+
     def get_geo_location_chart(data):
         # Login attempts by geographic location
         geo_counts = data.group_by("geo_location").count().sort("count", descending=True).head(10)
@@ -91,6 +91,16 @@ def create_auth_logs_tab(auth_logs):
             xaxis_title="Number of Login Attempts",
             yaxis_title="Geographic Location",
             height=500
+        )
+        return apply_grey_theme(fig)
+
+    def apply_grey_theme(fig):
+        """Apply consistent grey theme to all charts"""
+        fig.update_layout(
+            plot_bgcolor='#bdc3c7',      # Grey chart background
+            paper_bgcolor='#bdc3c7',     # Grey outer background  
+            font=dict(color="#425a72"),  # Dark grey text
+            title=dict(font=dict(color='#2c3e50', size=16))
         )
         return fig
     

@@ -1,0 +1,77 @@
+/* Uniform Professional Grey Theme */
+body {
+    background: #34495e;  /* Dark grey background */
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+/* Main dashboard container - slightly lighter grey */
+.container-fluid {
+    background: #ecf0f1;  /* Light grey instead of white */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 95%;
+}
+
+/* KPI Cards - matching grey theme */
+.card {
+    transition: all 0.3s ease;
+    border: none !important;
+    border-radius: 12px;
+    background: #bdc3c7 !important;  /* Medium grey for cards */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+    background: #95a5a6 !important;  /* Slightly darker on hover */
+}
+
+/* Chart containers - grey backgrounds */
+.plotly-graph-div {
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    background: #bdc3c7 !important;  /* Grey background for charts */
+}
+
+/* Tab content areas */
+.tab-content {
+    background: #ecf0f1;  /* Match main container */
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* Navigation tabs */
+.nav-tabs .nav-link {
+    border-radius: 10px 10px 0 0;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: #95a5a6;  /* Grey tabs */
+    color: white;
+    border: none;
+}
+
+.nav-tabs .nav-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background: #7f8c8d;
+}
+
+.nav-tabs .nav-link.active {
+    background: #2c3e50 !important;  /* Dark grey for active tab */
+    color: white !important;
+    border-color: transparent;
+}
+
+/* Headers and text adjustments for grey theme */
+h1, h2, h3, h4, h5 {
+    color: #2c3e50;  /* Dark grey text */
+}

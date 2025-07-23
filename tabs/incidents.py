@@ -20,8 +20,8 @@ def create_incidents_tab(security_incidents):
             yaxis_title="Incident Category",
             height=500
         )
-        return fig
-    
+        return apply_grey_theme(fig)
+
     def get_response_time_chart(data):
         # Response time distribution
         response_times = data['response_time_minutes'].to_list()
@@ -38,9 +38,9 @@ def create_incidents_tab(security_incidents):
         avg_time = sum(response_times) / len(response_times)
         fig.add_vline(x=avg_time, line_dash="dash", line_color="red", 
                       annotation_text=f"Avg: {avg_time:.1f} min")
-        
-        return fig
-    
+
+        return apply_grey_theme(fig)
+
     def get_resolution_status_chart(data):
         # Resolution effectiveness
         status_counts = data.group_by("resolution_status").count().sort("count", descending=True)
@@ -55,8 +55,8 @@ def create_incidents_tab(security_incidents):
         fig = go.Figure(data=[go.Pie(labels=statuses, values=counts)])
         fig.update_traces(marker_colors=colors, textinfo='label+percent')
         fig.update_layout(title="Incident Resolution Status")
-        return fig
-    
+        return apply_grey_theme(fig)
+
     def get_detection_method_chart(data):
         # How incidents are being detected
         detection_counts = data.group_by("detected_by").count().sort("count", descending=True)
@@ -69,6 +69,16 @@ def create_incidents_tab(security_incidents):
             title="Incident Detection Methods",
             xaxis_title="Detection Source",
             yaxis_title="Number of Incidents Detected"
+        )
+        return apply_grey_theme(fig)
+
+    def apply_grey_theme(fig):
+        """Apply consistent grey theme to all charts"""
+        fig.update_layout(
+            plot_bgcolor='#bdc3c7',      # Grey chart background
+            paper_bgcolor='#bdc3c7',     # Grey outer background  
+            font=dict(color="#425a72"),  # Dark grey text
+            title=dict(font=dict(color='#2c3e50', size=16))
         )
         return fig
     
@@ -90,7 +100,7 @@ def create_incidents_tab(security_incidents):
             dbc.Col([
                 dcc.Graph(
                     figure=get_resolution_status_chart(security_incidents),
-                    style={'height': '400px'}
+                    style={'height': '500px'}
                 )
             ], width=6)
         ]),
@@ -98,7 +108,7 @@ def create_incidents_tab(security_incidents):
             dbc.Col([
                 dcc.Graph(
                     figure=get_response_time_chart(security_incidents),
-                    style={'height': '400px'}
+                    style={'height': '500px'}
                 )
             ], width=12)
         ]),
