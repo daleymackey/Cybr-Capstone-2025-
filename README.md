@@ -26,78 +26,49 @@ Cybr-Capstone-2025-/
     └── Dataset 5__Security_Incident_Reports.csv
 ```
 
-## Environment Setup Instructions
+# Cybersecurity Dashboard
 
-### 1. Install Python
-```powershell
-# Install Python 3.12 via winget
-winget install Python.Python.3.12
-```
+A Python Dash application for monitoring cybersecurity data across 5 domains: web server logs, authentication, malware alerts, network traffic, and security incidents.
 
-### 2. Create Virtual Environment
-```powershell
-# Navigate to project directory
-cd Cybr-Capstone-2025-
+## Setup and Installation
 
-# Create virtual environment
-python -m venv venv
+1. Clone this repository
+2. Create a virtual environment:
+   ```
+   python -m venv venv
+   ```
 
-# Activate virtual environment (Windows)
-.\venv\Scripts\Activate.ps1
+3. Activate the virtual environment:
+   - Windows: `venv\Scripts\activate`
+   - Mac/Linux: `source venv/bin/activate`
 
-# If execution policy error:
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-```
+4. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
-### 3. Install Dependencies
-```powershell
-# Upgrade pip
-pip install --upgrade pip
+5. Run the application:
+   ```
+   python app.py
+   ```
 
-# Install all required packages
-pip install -r requirements.txt
-```
+6. Open your browser to: http://localhost:8050
 
-### 4. Verify Installation
-```powershell
-# Test all imports
-python -c "import dash; import plotly; import dash_bootstrap_components; import polars; print('SUCCESS: Environment ready!')"
-```
+## Requirements
 
-### 5. Run the Dashboard
-```powershell
-# Start the application
-python app.py
+- Python 3.12 or higher
+- All dependencies listed in requirements.txt
 
-# Open browser to: http://127.0.0.1:8050/
-```
+## Project Structure
 
-## Dependencies (requirements.txt)
-```
-dash>=3.0.0
-plotly>=6.0.0
-dash-bootstrap-components>=2.0.0
-polars>=1.30.0
-openpyxl>=3.1.0
-```
-
-## Key Features
-- **5 Main Tabs**: One for each dataset
-- **Polars**: Fast data processing (pandas alternative)
-- **Bootstrap**: Professional styling
-- **Modular Structure**: Easy to maintain and extend
+- `app.py` - Main application file
+- `data_loader.py` - Data processing functions
+- `data/` - CSV data files (5 datasets)
+- `tabs/` - Individual dashboard tabs
+- `assets/` - CSS styling
 
 ## Troubleshooting
 
-### Python Not Found
-- Ensure Python is in PATH
-- Restart terminal after installation
-- Use full path if needed
+If you get import errors, make sure your virtual environment is activated and all dependencies are installed.
 
-### Pandas/Numpy Compilation Issues
-- We use Polars instead (no compilation required)
-- Works perfectly on ARM64 Windows
-
-### Import Errors
-- Ensure virtual environment is activated
-- Check all dependencies installed correctly
+If the app won't start, check that Python 3.12+ is installed and all CSV files are present in the data directory.
