@@ -97,8 +97,8 @@ def create_auth_logs_tab(auth_logs):
     def apply_grey_theme(fig):
         """Apply consistent grey theme to all charts"""
         fig.update_layout(
-            plot_bgcolor='#bdc3c7',      # Grey chart background
-            paper_bgcolor='#bdc3c7',     # Grey outer background  
+            plot_bgcolor='#e0e5e8',      # Grey chart background
+            paper_bgcolor='#e0e5e8',     # Grey outer background  
             font=dict(color="#425a72"),  # Dark grey text
             title=dict(font=dict(color='#2c3e50', size=16))
         )
